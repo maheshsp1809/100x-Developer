@@ -1,0 +1,23 @@
+/* YourComponent.css */
+
+.counter {
+    display: flex;
+    gap: 10px; /* Adjust the spacing between buttons */
+  }
+  
+  .increment-button {
+    background-color: green; /* Set the background color for the Increment button */
+    color: white; /* Set the text color */
+    padding: 10px; /* Add padding for better visual appearance */
+    border:brown thick; /* Remove the default button border */
+    cursor: pointer; /* Add a pointer cursor on hover */
+  }
+  
+  .decrement-button {
+    background-color: red; /* Set the background color for the Decrement button */
+    color: white; /* Set the text color */
+    padding: 10px; /* Add padding for better visual appearance */
+    border:darkblue; /* Remove the default button border */
+    cursor: pointer; /* Add a pointer cursor on hover */
+  }
+  
