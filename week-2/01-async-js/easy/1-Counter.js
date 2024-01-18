@@ -5,10 +5,13 @@
 
 // setInterval(callback, delay, arg1, arg2, ...)
 
+const k = (count) => {
+  console.log(count);
+};
 const Counter1 = (count) => {
   setInterval(() => {
     count += 1;
-    console.log(count);
+    k(count);
   }, 1000);
 };
 Counter1(0);
