@@ -36,7 +36,7 @@ const TodoApp = () => {
         onClick={addTodo}
         style={{
           marginTop: "10px",
-          padding: "50px 10px",
+          padding: "5px 10px",
           backgroundColor: "green",
           color: "white",
           cursor: "pointer",
