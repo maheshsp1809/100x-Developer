@@ -1,6 +1,6 @@
 /* ReusableCard.css */
 .cards-container {
-    display: flex;
+    display: block;
     flex-wrap: wrap; /* Allow cards to wrap to the next line if there's not enough space */
   }
 .card {
@@ -8,7 +8,7 @@
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
-    width: 200px;
+    width: 500px;
     
      /* Set a fixed width for each card */
   }
@@ -52,4 +52,32 @@
     margin-bottom: 5px;
     color: #555;
   }
+  
+  /* Add these styles to your CSS */
+/* Updated styles to ensure text is in front of the button */
+.social-button {
+    text-decoration: none;
+    color: #fff; /* Text color */
+    padding: 10px 15px; /* Padding for the button */
+    border-radius: 5px; /* Border radius for rounded corners */
+    background-color: #007BFF; /* Background color for the button */
+    display: inline-block; /* Display as inline-block to be side by side */
+    margin: 10px; /* Margin between buttons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+    position: relative; /* Ensure the button is positioned relative */
+    z-index: 1; /* Set a higher z-index to bring the button to the front */
+  }
+  
+  .social-button:before {
+    content: ""; /* Create a pseudo-element for background */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px; /* Border radius for rounded corners */
+    background-color: #007BFF; /* Background color for the pseudo-element */
+    z-index: -1; /* Set a lower z-index to place it behind the text */
+  }
+  
   

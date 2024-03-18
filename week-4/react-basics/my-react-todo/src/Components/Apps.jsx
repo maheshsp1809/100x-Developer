@@ -1,5 +1,6 @@
 import React from "react";
 import ReusableCard from "./ReusableCard";
+import BusinessCard from "./BusinessCard";
 
 const Apps = () => {
   const sampleCards = [
@@ -32,6 +33,18 @@ const Apps = () => {
     },
     // Add more cards as needed
   ];
+
+  const dummyData = {
+    name: "John Doe",
+    description: "Software Developer | AI Enthusiast",
+    linkedin: "https://www.linkedin.com/in/johndoe/",
+    twitter: "https://twitter.com/johndoe",
+    otherSocialMedia: {
+      label: "GitHub",
+      link: "https://github.com/johndoe",
+    },
+    interests: ["Coding", "AI", "Cybersecurity"],
+  };
 
   return (
     <>

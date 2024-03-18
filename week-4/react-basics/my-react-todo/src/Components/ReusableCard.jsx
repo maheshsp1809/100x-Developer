@@ -9,18 +9,7 @@ const ReusableCard = (props) => {
     <div className="card">
       <h2>{name}</h2>
       <p>{description}</p>
-      <div className="social-media">
-        {socialMedia.map((link, index) => (
-          <a
-            key={index}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {link.name}
-          </a>
-        ))}
-      </div>
+
       <div className="interests">
         <h4>Interests:</h4>
         <ul>
@@ -28,6 +17,19 @@ const ReusableCard = (props) => {
             <li key={index}>{interest}</li>
           ))}
         </ul>
+      </div>
+      <div className="social-media">
+        {socialMedia.map((link, index) => (
+          <a
+            key={index}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-button" // Add a class for styling
+          >
+            {link.name}
+          </a>
+        ))}
       </div>
     </div>
   );
