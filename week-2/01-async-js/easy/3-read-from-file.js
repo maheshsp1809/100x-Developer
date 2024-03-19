@@ -8,17 +8,15 @@ const fs = require("fs");
 
 // Function to read the contents of a file and print them to the console
 const readAndPrintFile = (filePath) => {
-  fs.readFile(filePath, "utf8", callback);
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      console.error("Error reading the file:", err);
+    } else {
+      console.log("File Contents:", data);
+      performExpensiveOperation();
+    }
+  });
 };
-function callback(err, data) {
-  if (err) {
-    console.error("Error reading the file:", err);
-  } else {
-    console.log("File Contents:", data);
-    performExpensiveOperation();
-  }
-}
-
 // Function simulating an increasingly expensive operation
 const performExpensiveOperation = () => {
   // Simulating an expensive operation
